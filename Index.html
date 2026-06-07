@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cloud Clipboard</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+<h1>📋 Cloud Clipboard</h1>
+
+<input type="text" id="search" placeholder="Search clips...">
+
+<div class="new-clip">
+
+<input
+type="text"
+id="title"
+placeholder="Clip Title">
+
+<textarea
+id="content"
+placeholder="Write your text here..."></textarea>
+
+<button onclick="saveClip()">Save Clip</button>
+
+</div>
+
+<div class="actions">
+<button onclick="clearUnpinned()">Clear Unpinned</button>
+<button onclick="clearAll()">Clear Everything</button>
+</div>
+
+<div id="clips"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
